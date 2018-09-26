@@ -1,4 +1,5 @@
 FROM mysql:5.7
+# maybe we should try mysql v8 ?
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 
