@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "php" : "^7.0",
+    "php" : "^7.1",
     "maximaster/tools.twig": "1.1.3",
     "gregwar/image": "^2.0",
     "guzzlehttp/guzzle": "^6.0.0",
