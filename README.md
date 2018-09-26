@@ -2,6 +2,12 @@
 
 This is an example of how I implement Bitrix apps in terms of structure and DevOps things.
 
+First of all, thanks to authors of this projects (which i was inspired by):
+
+* https://github.com/bitrixdock/bitrixdock
+* https://github.com/regiomedia/bitrix-project
+
+
 ### Run
 
 To run the project like this one, you need to exec one command:
