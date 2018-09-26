@@ -1,8 +1,18 @@
-# bitrix-base-project
+# Bitrix Base Project
 
-Example of how I implement Bitrix apps in terms of structure and DevOps things.
+This is an example of how I implement Bitrix apps in terms of structure and DevOps things.
 
-Documentation will splitted into 3 directions:
-* [Front-end](./docs/front-end-development.md)
-* [Back-end](./docs/back-end-development.md)
-* [Server](./docs/server-side.md)
+### Run
+
+To run the project like this one, you need to exec one command:
+
+```bash
+$ docker-compose up -d --build --force-recreate 
+```
+
+All documentation will split into following directions:
+
+* [Project structure](./docs/project-structure.md)
+* [Server configuration](./docs/server-software.md)
+* [Back-end development](./docs/back-end-development.md)
+* [Front-end development](./docs/front-end-development.md)
