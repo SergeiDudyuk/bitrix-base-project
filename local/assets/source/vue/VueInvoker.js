@@ -9,6 +9,7 @@ const defaultOptions = {
 class VueInvoker {
   constructor (options = defaultOptions) {
     this.options = options
+    this.instances = []
   }
 
   async prepareComponents (collection) {
@@ -55,13 +56,16 @@ class VueInvoker {
     return new Promise((resolve) => {
       let instance = new Vue({
         el: element,
-        render: (createElement) => createElement(component, {
-          props: {initial: data}
+        render: (r) => r(component, {
+          props: {
+            initial: data
+          }
         }),
         mounted () {
           resolve()
         }
       })
+      this.instances.push(instance)
     })
   }
 }

@@ -1,4 +1,4 @@
-const baseComponent = {
+export default {
   props: [
     'initial'
   ],
@@ -22,5 +22,3 @@ const baseComponent = {
     }
   },
 }
-
-export default baseComponent

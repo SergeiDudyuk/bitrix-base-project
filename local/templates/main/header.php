@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     
     <?
-    $APPLICATION->IncludeFile('/local/assets/build/assets.header.html');
     $APPLICATION->ShowHead();
+    $APPLICATION->IncludeFile('/local/assets/build/assets.header.html');
     $APPLICATION->IncludeFile('/local/include/analytics.php');
     ?>
 </head>
