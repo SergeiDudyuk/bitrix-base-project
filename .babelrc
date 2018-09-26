@@ -1,0 +1,14 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    [
+      "syntax-dynamic-import"
+    ],
+    [
+      "transform-runtime",
+      {
+        "regenerator": true
+      }
+    ]
+  ]
+}

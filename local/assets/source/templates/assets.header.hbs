@@ -1,0 +1,5 @@
+<!-- webpack header assets -->
+{{#each htmlWebpackPlugin.files.chunks}}
+    <script src="{{this.entry}}" class="js-webpack-asset"></script>
+{{/each}}
+<!-- ./webpack header assets -->

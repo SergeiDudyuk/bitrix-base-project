@@ -1,0 +1,13 @@
+{
+  "name": "bitrix-deployment-service",
+  "description": "bitrix-deployment-service",
+  "main": "deploy.js",
+  "scripts": {
+    "start-deploy-server": "yarn install && node deploy.js"
+  },
+  "author": "Max Starikevich [maxim.starikevich@gmail.com]",
+  "license": "MIT",
+  "dependencies": {
+    "express": "*"
+  }
+}

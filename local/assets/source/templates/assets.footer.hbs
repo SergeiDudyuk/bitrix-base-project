@@ -1,0 +1,5 @@
+<!-- webpack footer assets -->
+{{#each htmlWebpackPlugin.files.chunks}}
+    <script src="{{this.entry}}" class="js-webpack-asset"></script>
+{{/each}}
+<!-- ./webpack footer assets -->

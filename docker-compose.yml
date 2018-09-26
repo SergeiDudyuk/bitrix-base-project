@@ -1,0 +1,96 @@
+version: '2'
+
+services:
+    deployment:
+        build: ./docker/deployment
+        container_name: deployment-${SERVICE_NAME}
+        volumes_from:
+        - source
+        volumes:
+        - ./ssh-keys:/home/node/.ssh
+        ports:
+        - '${DEPLOYMENT_WEB_PORT}:${DEPLOYMENT_WEB_PORT}'
+        restart: always
+        networks:
+        - bitrix
+        links:
+        - nginx
+        environment:
+            DEPLOYMENT_WEB_PORT: ${DEPLOYMENT_WEB_PORT}
+    php:
+        build: ./docker/${PHP_VERSION}
+        container_name: php-${SERVICE_NAME}
+        volumes_from:
+            - source
+        ports:
+            - '9000:9000'
+        links:
+            - mysql
+        networks:
+            - bitrix
+        restart: always
+    memcached:
+        image: memcached:1.5-alpine
+        container_name: memcached-${SERVICE_NAME}
+        volumes_from:
+          - source
+        ports:
+          - '11211:11211'
+        networks:
+          - bitrix
+        restart: always
+    nginx:
+        build: ./docker/nginx
+        container_name: nginx-${SERVICE_NAME}
+        depends_on:
+            - source
+        volumes_from:
+            - source
+        ports:
+            - '80:80'
+            - '443:443'
+        links:
+            - php
+        networks: 
+            - bitrix
+        restart: always
+    mysql:
+        build: docker/mysql
+        container_name: mysql-${SERVICE_NAME}
+        volumes_from:
+            - source
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        networks:
+            - bitrix
+        restart: always
+    nodejs:
+        build: docker/nodejs
+        container_name: nodejs-${SERVICE_NAME}
+        volumes_from:
+            - source
+        networks:
+            - bitrix
+    source:
+        image: alpine:latest
+        container_name: source-${SERVICE_NAME}
+        volumes:
+            - ./:/var/www/project
+            - ./data/mysql:/var/lib/mysql
+            - ./data/memcached:/var/lib/memcached
+            - ./logs/memcached:/var/log/memcached
+            - ./logs/nginx:/var/log/nginx
+            - ./logs/php:/var/log/php
+            - ./logs/mysql:/var/log/mysql
+        networks:
+            - bitrix
+networks:
+    bitrix:
+        driver: bridge
+        ipam:
+            driver: default

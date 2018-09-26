@@ -1,0 +1,39 @@
+{
+  "name": "bitrix-base-project",
+  "description": "bitrix-base-project",
+  "scripts": {
+    "deploy": "yarn install && webpack --mode production --config webpack/production.config.js && rm -rf ./local/assets/build/ && mv ./local/assets/pre-build ./local/assets/build",
+    "development": "yarn install && rm -rf ./local/assets/build/ && webpack --mode development --watch --config webpack/development.config.js"
+  },
+  "author": "Max Starikevich [maxim.starikevich@gmail.com]",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.10",
+    "handlebars": "^4.0.11",
+    "handlebars-loader": "^1.7.0",
+    "html-webpack-plugin": "^3.1.0",
+    "imports-loader": "^0.8.0",
+    "node-sass": "^4.7.2",
+    "postcss-clean": "^1.1.0",
+    "postcss-loader": "^2.1.2",
+    "sass-loader": "^6.0.7",
+    "stripcomment-loader": "^0.1.0",
+    "style-loader": "^0.20.3",
+    "vue": "^2.5.16",
+    "vue-ads-pagination": "^1.1.0",
+    "vue-loader": "^14.2.1",
+    "vue-paginate": "^3.6.0",
+    "vue-resource": "^1.5.0",
+    "vue-smart-pagination": "^2.0.8",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-merge": "^4.1.2"
+  }
+}
