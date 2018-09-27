@@ -10,7 +10,7 @@ On the front-end side, module called [VueInvoker](./../local/assets/source/vue/V
 Let's see how it works.
  
  ```php
-    <div class="vue-component" data-component="ExampleComponent" data-initial='"{"key":"value"}"'></div>
+    <div class="vue-component" data-component="ExampleComponent" data-initial='"{"test":"value"}"'></div>
     <!-- /.vue-component -->
  ```
 
