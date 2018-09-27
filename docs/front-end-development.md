@@ -30,8 +30,8 @@ On the front-end side, module called [VueInvoker](./../local/assets/source/vue/V
 Let's see how it works.
  
  ```php
-    <div class="vue-component" data-component="ExampleComponent" data-initial='"{"test":"value"}"'></div>
-    <!-- /.vue-component -->
+<div class="vue-component" data-component="ExampleComponent" data-initial='"{"test":"value"}"'></div>
+<!-- /.vue-component -->
  ```
 
 `VueInvoker` runs on every page, takes component's name from `data-component` attribute, searches component's object in [ComponentsCollection](./../local/assets/source/vue/ComponentsCollection.js) and makes Vue instance, which will replace target. Data from `data-initial` attribute will fill component's `$data` object fields, which were defined in the component with `null`:
@@ -59,3 +59,13 @@ export const ComponentsCollection = {
 ```
 
 For AJAX-requests feel free to use `VueResource` and implement REST-like endpoints in the `DOCUMENT_ROOT`
+
+
+### Making markups from scratch
+
+`/local/markup/main.php`
+
+```bash
+
+
+```
