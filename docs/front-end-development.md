@@ -1,20 +1,22 @@
 # Front-end development
 
-### Control
+To start any front-end development you need to:
 
-When you're ready to get job done on your development machine, run:
-
+* Start project
 ```bash
-$ yarn development
-```
-
-If you need to generate production-ready Webpack bundle, run:
-
+$ docker-compose up -d
+``` 
+* Attach to Node.js container's shell
 ```bash
-$ yarn deploy
-```
+$ bash shell-scripts/nodejs-container-start.sh
+``` 
+* Start development process inside container
+```bash
+ $ yarn development
+``` 
 
-More about this commands you can find in [package.json](./../package.json)
+
+More about `development` command you can find in [package.json](./../package.json)
 
 ### Client - server communication
 
