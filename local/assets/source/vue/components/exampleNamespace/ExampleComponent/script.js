@@ -1,7 +1,7 @@
 import BaseComponent from '../../../BaseComponent'
 
 export default {
-  name: 'Footer',
+  name: 'ExampleComponent',
   extends: BaseComponent,
   data () {
     return {
