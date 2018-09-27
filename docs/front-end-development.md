@@ -1,5 +1,23 @@
 # Front-end development
 
+### Control
+
+When you're ready to get job done on your development machine, run:
+
+```bash
+$ yarn development
+```
+
+If you need to generate production-ready Webpack bundle, run:
+
+```bash
+$ yarn deploy
+```
+
+More about this commands you can find in [package.json](./../package.json)
+
+### Client - server communication
+
 Data transfer between server and client is pretty simple.
 
 Back-end generates a bunch of special divs with data in attributes.
@@ -37,3 +55,5 @@ export const ComponentsCollection = {
   ExampleComponent: import('./components/exampleNamespace/ExampleComponent/component.vue' /* webpackChunkName: "Example" */),
 }
 ```
+
+For AJAX-requests feel free to use `VueResource` and implement REST-like endpoints in the `DOCUMENT_ROOT`
