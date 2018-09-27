@@ -2,6 +2,16 @@
 
 Here we will talk about where various project parts is located.
 
+### Tech Stack
+
+* PHP with Composer
+* MySQL
+* Webpack
+* Vue
+* modern JS (ES2016+) with Babel
+* SCSS styles
+* Node.js for deployment
+
 ### Web-server's document root
 
 You can find it in `/sites/SITE_ID/`. This folder has symlinks to `/bitrix/`, `/local/` and `/upload/`.
