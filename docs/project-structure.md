@@ -24,8 +24,6 @@ I like to keep all data inside project, even db files `/data/mysql` (it will be 
 
 If you need to copy project to another machine or backup - feel free to zip project's directory, upload archive to another place, unzip it and run.
 
-[Next: Server configuration](./server-software.md)
-
 ### Directories
 
 | Path                                           | Explanation                                      |
@@ -36,3 +34,6 @@ If you need to copy project to another machine or backup - feel free to zip proj
 | `/local/components`                            | Bitrix components                                |
 | `/local/cli`                                   | Command line scripts & tools                     |
 | `/local/markup`                                | Front-end only files with pre-defined input data |
+
+
+[Next: Server configuration](./server-software.md)
