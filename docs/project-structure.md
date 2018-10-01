@@ -28,12 +28,18 @@ If you need to copy project to another machine or backup - feel free to zip proj
 
 | Path                                           | Explanation                                      |
 |------------------------------------------------|--------------------------------------------------|
+| `/docker`                                     | Dockerfiles and additional files for each Docker service |
+| `/logs`                                     | Logs for all services |
+| `/data`                                        | MySQL, Memcached and other project data |
+| `/deployment`                                  | Deployment service source files (bash + Node.js) |
+| `/webpack`                                     | Webpack configs |
+| `/ssh-keys`                                     | SSH-keys for automatic deployment from bitbucket |
+| `/sites`                                     | `DOCUMENT_ROOT`s for each site |
 | `/local/assets/images` & `/local/assets/fonts` | Images & fonts                                   |
 | `/local/assets/source`                         | Client-side code (JS + Vue + SCSS)               |
 | `/local/classes`                               | Autoloaded classes (Composer autoloader)         |
 | `/local/components`                            | Bitrix components                                |
 | `/local/cli`                                   | Command line scripts & tools                     |
 | `/local/markup`                                | Front-end only files with pre-defined input data |
-
 
 [Next: Server configuration](./server-software.md)
