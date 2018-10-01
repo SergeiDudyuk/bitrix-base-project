@@ -63,9 +63,32 @@ For AJAX-requests feel free to use `VueResource` and implement REST-like endpoin
 
 ### Making markups from scratch
 
+Thanks to Docker, front-end developers can start entire project with working PHP.
+
+So, I think the best way to make markup and connect it to back-end is make a PHP-markup.
+
+Front-end developer with his back-end buddy coordinate with each other how incoming Vue-component's JSON-data looks like and later work in parallel.
+
+Example:
+
 `/local/markup/main.php`
 
-```bash
+```php
+<?php $bannerData = [
+    'bannerClass' => 'banner-top',
+    'img' => '/local/assets/images/bg/bg_main.png',
+    'title' => 'Title',
+    'description' => 'Description',
+    'button' => [
+        'text' => 'Button text',
+        'href' => '/link/to/',
+        'btnType' => 'default'
+    ]
+];
+?>
 
-
+<div class="vue-component" data-component="ButtonBanner" data-initial='<?= json_encode($bannerData); ?>'></div>
+<!-- /.vue-component -->
 ```
+
+Plain, simple and powerful, I think.
