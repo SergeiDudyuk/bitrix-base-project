@@ -25,22 +25,22 @@ Reusable bitrix base component example:
 namespace Local\NS;
 
 abstract class BaseComponent extends \CBitrixComponent {
-
-	/**
-	 * @param $params
-	 * @return array
-	 */
-	public function onPrepareComponentParams($params) {
-		
-		$params['CACHE_TYPE'] = $params['CACHE_TYPE'] ? $params['CACHE_TYPE'] : 'A';
-		$params['CACHE_TIME'] = $params['CACHE_TIME'] ? $params['CACHE_TIME'] : DEFAULT_CACHE_TIME;
-		
-		$params['API'] = $params['API'] === 'Y';
-
-		return $params;
-	}
-	
-	/**
+    
+    /**
+     * @param $params
+     * @return array
+     */
+    public function onPrepareComponentParams($params) {
+        
+        $params['CACHE_TYPE'] = $params['CACHE_TYPE'] ? $params['CACHE_TYPE'] : 'A';
+        $params['CACHE_TIME'] = $params['CACHE_TIME'] ? $params['CACHE_TIME'] : DEFAULT_CACHE_TIME;
+        
+        $params['API'] = $params['API'] === 'Y';
+    
+        return $params;
+    }
+    
+    /**
      * @return $this
      */
     protected function processApi() {
