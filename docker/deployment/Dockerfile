@@ -4,7 +4,7 @@ RUN apk --update add git openssh curl
 
 USER node
 
-RUN git config --global user.email "git@newsite.by" && \
+RUN git config --global user.email "git@deploy.com" && \
     git config --global user.name "Deployguy" && \
     git config --global push.default simple
 
