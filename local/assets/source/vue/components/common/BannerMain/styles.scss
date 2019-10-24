@@ -1,0 +1,67 @@
+@import '../../../../styles/general/_color';
+@import '../../../../styles/general/media';
+
+#app {
+  #banner-main {
+    background: $blue;
+    min-height: 460px;
+    color: #ffffff;
+    .v-image__image {
+      @include breakpoint(700) {
+        background-position: right center !important;
+      }
+    }
+    @include breakpoint(700) {
+      min-height: 193px;
+    }
+    .v-responsive.v-image {
+      @include breakpoint(700) {
+        height: 193px !important;
+      }
+    }
+    .banner-title {
+      font-family: Comfortaa,cursive;
+      text-transform: uppercase;
+      font-size: 41px;
+      padding-bottom: 11px;
+      line-height: 50px;
+    }
+    .banner-text {
+      padding-bottom: 30px;
+      font-size: 18px;
+    }
+    .banner-btn {
+      text-transform: uppercase;
+      color: #ffffff;
+      min-width: 190px;
+      font-size: 15px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+    .banner-img {
+      @include breakpoint(700) {
+        width: 72%;
+      }
+    }
+    .hidden-md-and-up{
+      background: #ececec;
+    }
+  }
+  .mobile-banner-title {
+    font-weight: bold;
+    color: #2f2e2e;
+    margin-top: 16px;
+  }
+  .mobile-banner-text {
+    padding-top: 10px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: #2f2e2e;
+  }
+  .mobile-banner-btn {
+    min-width: 190px;
+    margin-top: 18px;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+}

@@ -33,9 +33,8 @@ nbproject/
 /upload/
 
 /local/assets/build/
-
-vendor/
-node_modules/
+/node_modules/
+/vendor/
 
 /sites/*/bitrix
 /sites/*/local
@@ -43,11 +42,11 @@ node_modules/
 /sites/*/google*.html
 /sites/*/yandex*.html
 
+/configs/db.json
+/configs/deploy-env.json
+
 /data/
 .env
 
 /docker/*/dev.ini
-
-/ssh-keys/
-
-.DS_Store
+/repo/

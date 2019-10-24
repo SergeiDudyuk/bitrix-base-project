@@ -1,7 +1,7 @@
-FROM node:10-alpine
+FROM node:11.12.0-alpine
 
 WORKDIR /var/www/project
 
 USER node
 
-CMD yarn start
+CMD [ "yarn", "start" ]

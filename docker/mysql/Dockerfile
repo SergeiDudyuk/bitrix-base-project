@@ -1,5 +1,4 @@
-FROM mysql:5.7
-# maybe we should try mysql v8 ?
+FROM mysql:8.0.15
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 
@@ -9,4 +8,4 @@ USER mysql
 
 WORKDIR /var/www/project
 
-CMD mysqld
+CMD ["mysqld"]

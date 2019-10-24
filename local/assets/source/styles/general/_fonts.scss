@@ -1,0 +1,17 @@
+$fontsPath: '/local/assets/fonts/';
+/*FiraSans*/
+/*regular*/
+/*@font-face {
+  font-family: 'Comfortaa';
+  src:  url($fontsPath + 'Comfortaa/Comfortaa-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}*/
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url($fontsPath +'Comfortaa-Regular.woff2') format('woff2'),
+  url($fontsPath +'Comfortaa-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

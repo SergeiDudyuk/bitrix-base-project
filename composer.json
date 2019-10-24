@@ -1,24 +1,27 @@
 {
-  "name": "bitrix-base-project",
-  "description": "bitrix-base-project",
+  "name": "project",
+  "description": "Bitrix app",
   "minimum-stability": "stable",
-  "license": "MIT",
+  "license": "proprietary",
   "authors": [
     {
       "name": "Max Starikevich",
-      "email": "maxim.starikevich@gmail.com"
+      "email": "starikevich@newsite.by"
+    },
+    {
+      "name": "Sergei Dudyuk",
+      "email": "duduk@newsite.by"
     }
   ],
   "require": {
-    "php" : "^7.1",
+    "php" : "^7.3",
     "maximaster/tools.twig": "1.1.3",
     "gregwar/image": "^2.0",
-    "guzzlehttp/guzzle": "^6.0.0",
-    "ext-json": ""
+    "guzzlehttp/guzzle": "~6.0"
   },
   "autoload": {
     "psr-4": {
-      "\\": "local/classes/"
+      "Local\\": "local/classes/"
     }
   }
 }

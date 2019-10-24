@@ -1,4 +1,4 @@
-FROM nginx:1.15.3
+FROM nginx:1.15.9
 
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
@@ -11,4 +11,4 @@ RUN ln -s project/sites/s1 bitrix && chown -h www-data bitrix
 
 WORKDIR /var/www/project
 
-CMD nginx
+CMD ["nginx"]

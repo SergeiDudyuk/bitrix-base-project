@@ -1,0 +1,15 @@
+%btn_blue {
+  background: linear-gradient(270deg, #2690ce 0%, #007dc6 100%);
+  box-shadow: 0 1px 3px rgba(8, 8, 8, 0.15);
+}
+
+%btn{
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: none;
+  outline: 0;
+  user-select: none;
+}

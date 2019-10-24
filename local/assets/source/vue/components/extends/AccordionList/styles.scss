@@ -1,0 +1,97 @@
+@import '../../../../styles/general/color';
+@import '../../../../styles/general/media';
+
+#app {
+  .AccordionList {
+    @include breakpoint(959) {
+      padding-left: 20px;
+      padding-right: 30px;
+    }
+    @include breakpoint(600) {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 10px;
+    }
+    width: 100%;
+    padding-left: 39px;
+    padding-right: 50px;
+    padding-bottom: 17px;
+
+    .AccordionList_title {
+      @include breakpoint(959) {
+        font-size: 26px;
+        line-height: 35px;
+        padding-bottom: 25px;
+      }
+      @include breakpoint(600) {
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 15px;
+      }
+      text-transform: uppercase;
+      font-family: 'Comfortaa', cursive;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 42px;
+      padding: 10px 0 29px 0;
+      letter-spacing: 0.3px;
+    }
+
+    .AccordionList_list {
+      box-shadow: none;
+
+      .v-expansion-panel__header {
+        width: 100%;
+        height: 59px;
+      }
+
+      .v-expansion-panel__body {
+        @include breakpoint(600) {
+          padding-left: 0;
+        }
+      }
+
+      .AccordionList_list_content {
+        position: relative;
+        background: 0;
+
+        .AccordionList_list_title {
+          @include breakpoint(600) {
+            font-size: 18px;
+          }
+          display: flex;
+          align-items: center;
+          padding-left: 24px;
+          box-shadow: none;
+          font-family: Roboto;
+          font-size: 20px;
+          line-height: 19px;
+          min-height: 60px;
+          color: #2F2E2E;
+        }
+
+        .AccordionList_list_text {
+          @include breakpoint(959) {
+            font-size: 16px;
+            line-height: 20px;
+            padding-left: 10px;
+          }
+          @include breakpoint(600) {
+            font-size: 14px;
+            line-height: 18px;
+          }
+          background: 0;
+          padding-left: 30px;
+          font-size: 20px;
+        }
+
+        .v-icon {
+          color: $blue;
+          position: absolute;
+          top: 18px;
+          left: 15px;
+        }
+      }
+    }
+  }
+}

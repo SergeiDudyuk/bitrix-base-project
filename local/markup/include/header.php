@@ -1,130 +1,145 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Главная</title>
-    <?= file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/local/assets/build/assets.header.html'); ?>
-</head>
-<body>
-    <div id="app">
-        <?php $headerData = [
-            'menu' => [
-                [
-                    'text' => 'Тарифы',
-                    'href' => '#',
-                    'subMenu' => [
-                        [
-                            'text' => 'Облачный хостинг',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Аренда серверов',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Выделенный сервер',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Защищенный сервер',
-                            'href' => '#'
-                        ],
-                    ]
-                ],
-                [
-                    'text' => 'Домены',
-                    'href' => '#',
-                ],
-                [
-                    'text' => 'Конструктор сайтов',
-                    'href' => '#',
-                    'subMenu' => [
-                        [
-                            'text' => 'Облачный хостинг',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Аренда серверов',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Выделенный сервер',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Защищенный сервер',
-                            'href' => '#'
-                        ],
-                    ]
-                ],
-                [
-                    'text' => 'О компании',
-                    'href' => '#',
-                    'subMenu' => [
-                        [
-                            'text' => 'Облачный хостинг',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Аренда серверов',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Выделенный сервер',
-                            'href' => '#'
-                        ],
-                        [
-                            'text' => 'Защищенный сервер',
-                            'href' => '#'
-                        ],
-                    ]
-                ],
-            ],
-            'phone' => '375172342312',
-            'authHref' => '#',
-            'contacts' => [
-                [
-                    'title' => 'Круглосуточная техподдержка',
-                    'mainPhone' => '375171234567',
-                    'email' => 'support@hostfly.by',
-                    'additionalContacts' => []
-                ],
-                [
-                    'title' => 'Отдел продаж',
-                    'mainPhone' => '375175671234',
-                    'email' => 'sales@hostfly.by',
-                    'additionalContacts' => [
-                        [
-                            'phone' => '375291231212',
-                            'operator' => 'Velcom',
-                            'schedule' => 'Пн-Пт: с 9:00 до 20:00',
-                        ],
-                        [
-                            'phone' => '375291231212',
-                            'operator' => 'MTS',
-                            'schedule' => 'Сб-Вс: с 9:00 до 21:00',
-                        ],
-                        [
-                            'phone' => '375291231212',
-                            'operator' => 'Life',
-                            'schedule' => '',
-                        ],
-                        [
-                            'phone' => '375291231212',
-                            'operator' => 'Факс',
-                            'schedule' => '',
-                        ],
-                    ],
-                    'workTime' => [
-                         'Пн-Пт: с 9:00 до 20:00',
-                         'Сб-Вс: с 9:00 до 21:00',
+<?
 
-                    ]
-                ]
+$headerData = [
+    'inputHidden' => '',
+    'userIsLogin' => true,
+    'countInCard' => 11,
+    'menu' => [
+        [
+            'text' => 'Акции',
+            'href' => '#',
+            'icon' => '/local/assets/images/icons/icon-nav-0.svg',
+            'subMenu' => [
+                [
+                    'text' => 'Все акции',
+                    'href' => './stock.php'
+                ],
+                [
+                    'text' => 'Особая цена',
+                    'href' => './sales.php'
+                ],
+                [
+                    'text' => 'Скидки недели',
+                    'href' => './404.php'
+                ],
+                [
+                    'text' => 'Ярмарка выходного дня',
+                    'href' => './404.php'
+                ], [
+                    'text' => 'Премиум товары',
+                    'href' => './sales.php'
+                ], [
+                    'text' => 'Акции по Купилке',
+                    'href' => './sales.php'
+                ], [
+                    'text' => 'Архив акций',
+                    'href' => './stock.php'
+                ],
             ]
-        ];
-        ?>
+        ],
+        [
+            'text' => 'Магазины',
+            'href' => '#',
+            'icon' => '/local/assets/images/icons/icon-nav-1.svg',
+            'subMenu' => [
+                [
+                    'text' => 'Все магазины',
+                    'href' => './map.php'
+                ],
+                [
+                    'text' => 'Круглосуточные',
+                    'href' => './map.php#infinity',
+                    'onlyUpdateMap' => true
+                ],
+                [
+                    'text' => 'Где есть Nravizza Pizza',
+                    'href' => './map.php#pizza',
+                    'onlyUpdateMap' => true
+                ],
+                [
+                    'text' => 'Магазины с кулинарией',
+                    'href' => './map.php#cookery',
+                    'onlyUpdateMap' => true
+                ], [
+                    'text' => 'Магазины с собственной выпечкой',
+                    'href' => './map.php#bake',
+                    'onlyUpdateMap' => true
+                ],
+            ]
+        ],
+        [
+            'text' => 'Купилка',
+            'href' => '#',
+            'icon' => '/local/assets/images/icons/kupilka_icon.svg',
+            'subMenu' => [
+                [
+                    'text' => 'Акции по Купилке',
+                    'href' => './sales.php'
+                ],
+                [
+                    'text' => 'О Купилке',
+                    'href' => './stockCard.php'
+                ],
+                [
+                    'text' => 'Супер Купилка',
+                    'href' => './404.php'
+                ],
+                [
+                    'text' => 'Партнеры',
+                    'href' => './404.php'
+                ],
+            ]
+        ],
+        [
+            'text' => 'Вкусно готовим',
+            'href' => '#',
+            'icon' => '/local/assets/images/icons/icon-nav-3.svg',
+            'subMenu' => [
+                [
+                    'text' => 'Nravizza Pizza',
+                    'href' => './pizza.php'
+                ],
+                [
+                    'text' => 'Знатоки',
+                    'href' => './404.php'
+                ],
+                [
+                    'text' => 'Полуфабрикаты',
+                    'href' => './404.php'
+                ],
+                [
+                    'text' => 'Готовая продукция',
+                    'href' => './404.php'
+                ], [
+                    'text' => 'Пекарня',
+                    'href' => './lk.php'
+                ], [
+                    'text' => 'Рецепты',
+                    'href' => './soups.php'
+                ],
+            ]
+        ],
+    ],
+    'menuBottom' => [
+        [
+            'text' => 'Соседи сегодня',
+            'href' => './today.php',
+        ],
+        [
+            'text' => 'Работа в Соседях',
+            'href' => './work.php',
+        ],
+        [
+            'text' => 'Сотрудничество',
+            'href' => './cooperation.php',
+        ],
+        [
+            'text' => 'Контакты',
+            'href' => './contacts.php',
+        ],
+    ]
+];
+?>
 
-        <div class="vue-component" data-component="Header" data-initial='<?= json_encode($headerData); ?>'></div>
-        <!-- /.vue-component -->
+<div class="vue-component" data-component="Header" data-initial='<?= json_encode($headerData); ?>'></div>
+<!-- /.vue-component -->

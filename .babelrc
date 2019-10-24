@@ -1,11 +1,11 @@
 {
-  "presets": ["env"],
+  "presets": ["@babel/preset-env"],
   "plugins": [
     [
       "syntax-dynamic-import"
     ],
     [
-      "transform-runtime",
+      "@babel/transform-runtime",
       {
         "regenerator": true
       }
