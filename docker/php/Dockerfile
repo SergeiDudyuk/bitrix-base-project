@@ -35,4 +35,4 @@ RUN ln -s project/sites/s1 bitrix && chown -h www-data bitrix
 
 WORKDIR /var/www/project
 
-CMD service cron start && /usr/sbin/php-fpm7.3 -O
+CMD service cron start && /usr/sbin/php-fpm7.3 -F -O 2>&1 | sed -u 's,.*: \"\(.*\)$,\1,'| sed -u 's,"$,,' 1>&1

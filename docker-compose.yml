@@ -9,11 +9,11 @@ services:
             - ./ssh-keys:/home/node/.ssh
         ports:
             - '${INTERFACE}:${DEPLOYMENT_WEB_PORT}:${DEPLOYMENT_WEB_PORT}'
-        restart: always
         networks:
             - bitrix
         depends_on:
             - nginx
+        restart: always
         environment:
           DEPLOYMENT_WEB_PORT: ${DEPLOYMENT_WEB_PORT}
     php:
@@ -44,8 +44,6 @@ services:
     nginx:
         build: ./docker/nginx
         container_name: nginx-${PROJECT_NAME}
-        depends_on:
-            - source
         volumes:
             - ./:/var/www/project
             - ./logs/nginx:/var/log/nginx
@@ -53,6 +51,7 @@ services:
             - '${INTERFACE}:${HOST_PORT_HTTP}:${CONTAINER_PORT_HTTP}'
             - '${INTERFACE}:${HOST_PORT_HTTPS}:${CONTAINER_PORT_HTTPS}'
         depends_on:
+            - source
             - php
         networks: 
             - bitrix
