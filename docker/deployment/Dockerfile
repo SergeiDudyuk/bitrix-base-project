@@ -1,4 +1,4 @@
-FROM node:10.6.0-alpine
+FROM node:alpine
 
 RUN apk --update add git openssh curl
 

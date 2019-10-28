@@ -1,4 +1,4 @@
-FROM node:11.12.0-alpine
+FROM node:alpine
 
 WORKDIR /var/www/project
 

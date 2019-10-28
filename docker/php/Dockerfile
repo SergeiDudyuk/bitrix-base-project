@@ -1,9 +1,12 @@
-FROM phpdockerio/php73-fpm:latest
+FROM php:fpm
+
+RUN rm /etc/apt/preferences.d/no-debian-php
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get -y --no-install-recommends install \
+    apt-utils \
     php7.3-mbstring \
     php7.3-mysql \
     php7.3-intl \
@@ -35,4 +38,4 @@ RUN ln -s project/sites/s1 bitrix && chown -h www-data bitrix
 
 WORKDIR /var/www/project
 
-CMD service cron start && /usr/sbin/php-fpm7.3 -F -O 2>&1 | sed -u 's,.*: \"\(.*\)$,\1,'| sed -u 's,"$,,' 1>&1
+CMD service cron start && php-fpm

@@ -30,7 +30,7 @@ services:
             - bitrix
         restart: always
     memcached:
-        image: memcached:1.5-alpine
+        image: memcached:alpine
         container_name: memcached-${PROJECT_NAME}
         volumes:
             - ./:/var/www/project
