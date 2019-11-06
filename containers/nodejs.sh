@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose run -u node --rm --entrypoint sh nodejs
+docker-compose run -u node --rm --entrypoint bash nodejs
