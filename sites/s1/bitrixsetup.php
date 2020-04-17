@@ -107,6 +107,7 @@ else
 			array(
 				'NAME' => '1С-Битрикс24',
 				'LIST' => array(
+					'portal/bitrix24_shop' => 'Интернет-магазин плюс CRM',
 					'portal/bitrix24' => 'Корпоративный портал',
 					'portal/bitrix24_enterprise' => 'Энтерпрайз',
 				)

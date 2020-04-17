@@ -59,6 +59,7 @@ services:
     mysql:
         build: docker/mysql
         container_name: mysql-${PROJECT_NAME}
+        command: --default-authentication-plugin=mysql_native_password
         volumes:
             - ./:/var/www/project
             - ./data/mysql:/var/lib/mysql

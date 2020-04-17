@@ -32,7 +32,6 @@ RUN pecl install imagick \
 
 RUN docker-php-ext-install -j$(nproc) \
     intl \
-    interbase \
     soap \
     gd \
     opcache \
