@@ -31,6 +31,8 @@ RUN pecl install imagick \
     xdebug
 
 RUN docker-php-ext-install -j$(nproc) \
+    pdo_mysql \
+    mysqli \
     intl \
     soap \
     gd \
