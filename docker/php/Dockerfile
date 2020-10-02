@@ -58,7 +58,7 @@ RUN chmod 644 /etc/msmtprc
 
 RUN apt-get install -y cron && touch cronfile && \
     echo "*/1 * * * * www-data php -f /var/www/project/local/cli/cron-events.php" > cronfile && \
-    crontab cronfile && \
+    crontab -u www-data cronfile && \
     rm cronfile
 
 WORKDIR /var/www/
